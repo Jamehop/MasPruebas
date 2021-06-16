@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="215.0" prefWidth="258.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.SistemaEmergenciasController">
+   <children>
+      <Button fx:id="btnEmergencia" layoutX="65.0" layoutY="153.0" mnemonicParsing="false" onMouseClicked="#AnunciarEmergencia" text="Anunciar Emergencia" />
+      <RadioButton fx:id="btnTrafico" layoutY="25.0" mnemonicParsing="false" text="Accidente trafico">
+         <toggleGroup>
+            <ToggleGroup fx:id="Accidentes" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="btnCasero" layoutY="58.0" mnemonicParsing="false" text="Accidente Casero" toggleGroup="$Accidentes" />
+      <RadioButton fx:id="btnInundacion" layoutY="99.0" mnemonicParsing="false" text="Inundacion" toggleGroup="$Accidentes" />
+      <RadioButton fx:id="btnZaragoza" layoutX="150.0" layoutY="25.0" mnemonicParsing="false" text="Zaragoza">
+         <toggleGroup>
+            <ToggleGroup fx:id="Provincia" />
+         </toggleGroup>
+      </RadioButton>
+      <RadioButton fx:id="btnHuesca" layoutX="150.0" layoutY="67.0" mnemonicParsing="false" text="Huesca" toggleGroup="$Provincia" />
+      <RadioButton fx:id="btnTeruel" layoutX="150.0" layoutY="99.0" mnemonicParsing="false" text="Teruel" toggleGroup="$Provincia" />
+   </children>
+</AnchorPane>
